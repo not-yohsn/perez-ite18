@@ -6,10 +6,12 @@
     <title>John Joseph Perez - Portfolio | johnjoseph.portfolio</title>
     <link rel="icon" type="image/jpeg" href="favicon.jpg">
     <link rel="apple-touch-icon" href="favicon.jpg">
+    <!-- Note: Tailwind CDN is for development only. For production, use the Tailwind CLI build process. -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
         
         * {
             font-family: 'Poppins', sans-serif;
@@ -20,15 +22,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         }
         
         .fade-in {
@@ -45,14 +38,6 @@
                 opacity: 1;
                 transform: translateY(0);
             }
-        }
-        
-        .social-icon {
-            transition: all 0.3s ease;
-        }
-        
-        .social-icon:hover {
-            transform: scale(1.2) rotate(5deg);
         }
         
         .gradient-text {
@@ -216,7 +201,7 @@
 </head>
 <body class="text-white">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-gradient-to-b from-[#0a0e27]/98 to-[#1a0e3f]/80 backdrop-blur-md z-50 border-b border-cyan-500/30 shadow-lg shadow-cyan-500/5 sticky">
+    <nav class="fixed top-0 w-full bg-gradient-to-b from-[#0a0e27]/98 to-[#1a0e3f]/80 backdrop-blur-md z-50 border-b border-cyan-500/30 shadow-lg shadow-cyan-500/5">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <h1 class="text-2xl font-bold gradient-text neon-glow">JOHN JOSEPH PEREZ</h1>
@@ -454,20 +439,6 @@
                     </div>
                 </div>
 
-                <!-- Bonus -->
-                <div class="card-hover bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-purple-500 hidden">
-                    <div class="bg-gradient-to-br from-cyan-600 to-cyan-800 p-6 h-32 flex items-center justify-center">
-                        <div class="text-center">
-                            <div class="text-4xl mb-2">⚡</div>
-                            <p class="font-semibold">Boost Flow</p>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-bold mb-2">Boost Flow</h3>
-                        <p class="text-sm text-gray-400 mb-4">Workflow optimization</p>
-                        <a href="https://get.boostflow.io" target="_blank" class="text-purple-400 hover:text-purple-300 text-sm font-semibold">View Project →</a>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
