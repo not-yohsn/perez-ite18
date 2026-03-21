@@ -257,6 +257,21 @@
             color: #00d4ff;
             background: rgba(0, 212, 255, 0.05);
         }
+    /* Back to Top Button */
+    .back-to-top {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        z-index: 50;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .back-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+    }
     </style>
 </head>
 <body class="text-white">
@@ -761,6 +776,11 @@
     </section>
     </main>
 
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top btn-neon w-12 h-12 rounded-full flex items-center justify-center" aria-label="Scroll to top">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
+    </button>
+
     <!-- Footer -->
     <footer class="border-t border-cyan-500/30 bg-gradient-to-b from-[#0a0e27] to-[#050616] py-8 px-4">
         <div class="max-w-6xl mx-auto text-center text-gray-400">
@@ -850,6 +870,21 @@
             const subject = encodeURIComponent('Portfolio Inquiry from ' + name);
             const body = encodeURIComponent(message + '\n\nFrom: ' + name + '\nEmail: ' + email);
             window.location.href = 'mailto:johnjosephperez26@gmail.com?subject=' + subject + '&body=' + body;
+        });
+
+        // Back to top button
+        const backToTopBtn = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>
