@@ -17,278 +17,36 @@
     <meta name="twitter:title" content="John Joseph Perez - Portfolio">
     <meta name="twitter:description" content="Web Designer, Video Editor & Graphic Designer. GoHighLevel automation, AI integrations, video editing, and creative design.">
     <meta name="twitter:image" content="favicon.jpg">
+
     <title>John Joseph Perez - Portfolio | johnjoseph.portfolio</title>
     <link rel="icon" type="image/jpeg" href="favicon.jpg">
     <link rel="apple-touch-icon" href="favicon.jpg">
-    <!-- Note: Tailwind CDN is for development only. For production, use the Tailwind CLI build process. -->
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        
-        * {
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        .hero-text {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .fade-in {
-            opacity: 0;
-            animation: fadeInUp 0.8s ease forwards;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, #00d4ff 0%, #0099ff 50%, #ff00ff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-        /* Modern Futuristic Theme */
-        body {
-            background: linear-gradient(135deg, #0a0e27 0%, #1a0e3f 50%, #0f0a2e 100%);
-            position: relative;
-            overflow-x: hidden;
-        }
-
-        .neon-glow {
-            letter-spacing: 0.05em;
-            font-weight: 700;
-        }
-
-        .neon-border {
-            border: 1px solid rgba(0, 212, 255, 0.4);
-            box-shadow: 0 0 15px rgba(0, 212, 255, 0.15);
-        }
-
-        .cyber-card {
-            background: linear-gradient(135deg, rgba(15, 10, 46, 0.9) 0%, rgba(26, 14, 63, 0.85) 100%);
-            border: 1px solid rgba(0, 212, 255, 0.2);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            transition: all 0.4s cubic-bezier(0.33, 0.66, 0.66, 1);
-        }
-
-        .cyber-card:hover {
-            border-color: rgba(0, 212, 255, 0.5);
-            box-shadow: 0 12px 48px rgba(0, 212, 255, 0.15), 0 0 30px rgba(0, 212, 255, 0.1);
-            background: linear-gradient(135deg, rgba(0, 212, 255, 0.08) 0%, rgba(0, 153, 255, 0.08) 100%), linear-gradient(135deg, rgba(15, 10, 46, 0.95) 0%, rgba(26, 14, 63, 0.9) 100%);
-            transform: translateY(-8px);
-        }
-
-        .btn-neon {
-            background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
-            border: 1px solid rgba(0, 212, 255, 0.6);
-            color: #0a0e27;
-            font-weight: 600;
-            box-shadow: 0 2px 8px rgba(0, 212, 255, 0.1);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-neon::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.2);
-            transition: left 0.3s ease;
-        }
-
-        .btn-neon:hover {
-            box-shadow: 0 4px 12px rgba(0, 212, 255, 0.25);
-            transform: translateY(-2px);
-        }
-
-        .btn-neon:hover::before {
-            left: 100%;
-        }
-
-        .btn-neon-outline {
-            border: 1.5px solid rgba(0, 212, 255, 0.5);
-            color: #00d4ff;
-            background: rgba(0, 212, 255, 0.05);
-            box-shadow: 0 2px 8px rgba(0, 212, 255, 0.08);
-            transition: all 0.3s ease;
-            position: relative;
-            isolation: isolate;
-            overflow: hidden;
-        }
-
-        .btn-neon-outline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 212, 255, 0.1);
-            transition: left 0.3s ease;
-            z-index: -1;
-        }
-
-        .btn-neon-outline:hover {
-            border-color: rgba(0, 212, 255, 0.8);
-            background: rgba(0, 212, 255, 0.1);
-            box-shadow: 0 4px 12px rgba(0, 212, 255, 0.2);
-            transform: translateY(-2px);
-        }
-
-        /* Modern Icon Styling */
-        .icon-container {
-            width: 80px;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(0, 153, 255, 0.05) 100%);
-            border: 1px solid rgba(0, 212, 255, 0.2);
-            border-radius: 16px;
-            transition: all 0.3s ease;
-            font-size: 2.5rem;
-        }
-
-        .cyber-card:hover .icon-container {
-            background: linear-gradient(135deg, rgba(0, 212, 255, 0.2) 0%, rgba(0, 153, 255, 0.1) 100%);
-            border-color: rgba(0, 212, 255, 0.4);
-            transform: scale(1.1) rotate(5deg);
-        }
-
-        /* Modern Animations */
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes floatIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px) scale(0.95);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-
-        @keyframes pulse-subtle {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.8;
-            }
-        }
-
-        .card-hover {
-            transition: all 0.4s cubic-bezier(0.33, 0.66, 0.66, 1);
-        }
-
-        .card-hover:hover {
-            transform: translateY(-8px);
-        }
-
-        /* Mobile Menu */
-        .mobile-menu-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 55;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .mobile-menu-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .mobile-menu {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 280px;
-            height: 100%;
-            background: linear-gradient(135deg, #0a0e27 0%, #1a0e3f 100%);
-            border-left: 1px solid rgba(0, 212, 255, 0.3);
-            z-index: 60;
-            transition: right 0.3s ease;
-            padding: 80px 24px 24px;
-        }
-
-        .mobile-menu.active {
-            right: 0;
-        }
-
-        .mobile-menu a {
-            display: block;
-            padding: 12px 16px;
-            color: #e5e7eb;
-            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
-            transition: all 0.2s ease;
-        }
-
-        .mobile-menu a:hover {
-            color: #00d4ff;
-            background: rgba(0, 212, 255, 0.05);
-        }
-    /* Back to Top Button */
-    .back-to-top {
-        position: fixed;
-        bottom: 24px;
-        right: 24px;
-        z-index: 50;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-    }
-
-    .back-to-top.visible {
-        opacity: 1;
-        visibility: visible;
-    }
-    </style>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="text-white">
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-cyan-500 focus:text-black focus:px-4 focus:py-2 focus:rounded">Skip to content</a>
+
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-gradient-to-b from-[#0a0e27]/98 to-[#1a0e3f]/80 backdrop-blur-md z-50 border-b border-cyan-500/30 shadow-lg shadow-cyan-500/5">
+    <nav class="nav-bar fixed top-0 w-full z-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <h1 class="text-2xl font-bold gradient-text neon-glow">JOHN JOSEPH PEREZ</h1>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#automations" class="hover:text-cyan-400 transition" aria-label="View AI Automations section">AI Automations</a>
-                    <a href="#gohighlevel" class="hover:text-cyan-400 transition" aria-label="View GoHighLevel projects">GHL</a>
-                    <a href="#videos" class="hover:text-cyan-400 transition" aria-label="View Video Editing portfolio">Video Editing</a>
-                    <a href="#graphics" class="hover:text-cyan-400 transition" aria-label="View Creative designs">Creatives</a>
-                    <a href="#contact" class="hover:text-cyan-400 transition" aria-label="Go to Contact section">Contact</a>
+                    <a href="#automations" class="nav-link" aria-label="View AI Automations section">AI Automations</a>
+                    <a href="#gohighlevel" class="nav-link" aria-label="View GoHighLevel projects">GHL</a>
+                    <a href="#videos" class="nav-link" aria-label="View Video Editing portfolio">Video Editing</a>
+                    <a href="#graphics" class="nav-link" aria-label="View Creative designs">Creatives</a>
+                    <a href="#contact" class="nav-link" aria-label="Go to Contact section">Contact</a>
                 </div>
                 <button id="hamburger-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1.5" aria-label="Open navigation menu" aria-expanded="false">
                     <span class="block w-6 h-0.5 bg-cyan-400 transition-all duration-300" id="hamburger-top"></span>
@@ -313,142 +71,143 @@
 
     <main>
     <!-- Hero Section -->
-    <section id="main-content" class="min-h-screen flex items-center justify-center pt-20 px-4">
-        <div class="text-center fade-in">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 hero-text">John Joseph Perez</h1>
+    <section id="main-content" class="hero-bg min-h-screen flex items-center justify-center pt-20 px-4">
+        <div class="text-center hero-stagger max-w-4xl mx-auto">
+            <h2 class="hero-text mb-6">John Joseph Perez</h2>
             <p class="text-xl md:text-2xl text-gray-300 mb-4">Web Designer | Video Editor | Graphic Designer</p>
-            <p class="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
+            <p class="text-lg text-[#94a3b8] mb-8 max-w-2xl mx-auto">
                 Transforming ideas into digital reality through GoHighLevel automation, stunning video content, and engaging design
             </p>
             <div class="flex gap-4 justify-center flex-wrap">
-                <a href="#automations" class="btn-neon px-8 py-3 rounded-lg font-semibold transition">View My Works</a>
-                <a href="#contact" class="btn-neon-outline px-8 py-3 rounded-lg font-semibold transition">Get In Touch</a>
+                <a href="#automations" class="btn-neon px-8 py-3 rounded-lg font-semibold">View My Works</a>
+                <a href="#contact" class="btn-neon-outline px-8 py-3 rounded-lg font-semibold">Get In Touch</a>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section class="py-20 px-4 bg-gradient-to-b from-[#0f0a2e]/50 to-[#1a0e3f]/50 border-t border-cyan-500/20">
+    <section class="section-alt py-20 px-4 border-t border-cyan-500/10 reveal">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Core Skills</h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">Core Skills</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="card-hover cyber-card p-8 rounded-2xl">
+                <div class="glass-card p-8 rounded-2xl text-center">
                     <div class="icon-container mx-auto mb-6">🚀</div>
                     <h3 class="text-2xl font-bold mb-4 text-cyan-400">GoHighLevel</h3>
-                    <p class="text-gray-300">CRM setup, sales funnels, workflow automation, and process optimization</p>
+                    <p class="text-[#94a3b8]">CRM setup, sales funnels, workflow automation, and process optimization</p>
                 </div>
-                <div class="card-hover cyber-card p-8 rounded-2xl">
+                <div class="glass-card p-8 rounded-2xl text-center">
                     <div class="icon-container mx-auto mb-6">🎬</div>
                     <h3 class="text-2xl font-bold mb-4 text-cyan-400">Video Editing</h3>
-                    <p class="text-gray-300">Professional video editing using Capcut for social media, marketing & promotions</p>
+                    <p class="text-[#94a3b8]">Professional video editing using Capcut for social media, marketing & promotions</p>
                 </div>
-                <div class="card-hover cyber-card p-8 rounded-2xl">
+                <div class="glass-card p-8 rounded-2xl text-center">
                     <div class="icon-container mx-auto mb-6">🎨</div>
                     <h3 class="text-2xl font-bold mb-4 text-cyan-400">Graphic Design</h3>
-                    <p class="text-gray-300">Creative and engaging designs using Canva for ads, branding & social content</p>
+                    <p class="text-[#94a3b8]">Creative and engaging designs using Canva for ads, branding & social content</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- AI Automations Section -->
-    <section id="automations" class="py-20 px-4 bg-gradient-to-b from-[#0a0e27] via-[#1a1a4f]/40 to-[#0a0e27] border-y border-cyan-500/20">
+    <section id="automations" class="section-dark py-20 px-4 border-y border-cyan-500/10 reveal">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-6 gradient-text">AI Automations & Integrations</h2>
-            <p class="text-center text-gray-300 mb-16 text-lg">Seamless workflow automation across industry-leading platforms</p>
-            
-            <div class="grid md:grid-cols-4 gap-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-6 gradient-text">AI Automations & Integrations</h2>
+            <p class="text-center text-[#94a3b8] mb-16 text-lg">Seamless workflow automation across industry-leading platforms</p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Make.com -->
-                <div class="card-hover group">
-                    <div class="bg-gradient-to-br from-yellow-500 to-orange-600 p-8 rounded-t-xl h-40 flex items-center justify-center relative overflow-hidden">
+                <div class="glass-card rounded-2xl overflow-hidden group">
+                    <div class="bg-gradient-to-br from-yellow-500 to-orange-600 p-8 h-40 flex items-center justify-center relative overflow-hidden">
                         <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition"></div>
                         <div class="text-center relative z-10">
                             <div class="text-5xl mb-3">🔗</div>
                             <p class="font-bold text-white text-lg">Make.com</p>
                         </div>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-b-xl border border-gray-700 border-t-0">
-                        <h3 class="font-bold mb-3 text-lg">Make.com</h3>
-                        <p class="text-gray-300 text-sm mb-4">Visual workflow automation and API integrations. Connect apps, automate tasks, and scale without code.</p>
+                    <div class="p-6">
+                        <h3 class="font-bold mb-3 text-lg text-[#f8fafc]">Make.com</h3>
+                        <p class="text-[#94a3b8] text-sm mb-4">Visual workflow automation and API integrations. Connect apps, automate tasks, and scale without code.</p>
                         <a href="https://make.com" target="_blank" class="text-purple-400 hover:text-purple-300 text-sm font-semibold transition">Explore Make.com →</a>
                     </div>
                 </div>
 
                 <!-- GoHighLevel -->
-                <div class="card-hover group">
-                    <div class="bg-gradient-to-br from-blue-500 to-blue-700 p-8 rounded-t-xl h-40 flex items-center justify-center relative overflow-hidden">
+                <div class="glass-card rounded-2xl overflow-hidden group">
+                    <div class="bg-gradient-to-br from-blue-500 to-blue-700 p-8 h-40 flex items-center justify-center relative overflow-hidden">
                         <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition"></div>
                         <div class="text-center relative z-10">
                             <div class="text-5xl mb-3">🚀</div>
                             <p class="font-bold text-white text-lg">GoHighLevel</p>
                         </div>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-b-xl border border-gray-700 border-t-0">
-                        <h3 class="font-bold mb-3 text-lg">GoHighLevel</h3>
-                        <p class="text-gray-300 text-sm mb-4">All-in-one CRM, funnel builder, and automation platform. Manage sales, marketing, and client relationships.</p>
+                    <div class="p-6">
+                        <h3 class="font-bold mb-3 text-lg text-[#f8fafc]">GoHighLevel</h3>
+                        <p class="text-[#94a3b8] text-sm mb-4">All-in-one CRM, funnel builder, and automation platform. Manage sales, marketing, and client relationships.</p>
                         <a href="https://gohighlevel.com" target="_blank" class="text-purple-400 hover:text-purple-300 text-sm font-semibold transition">Explore GoHighLevel →</a>
                     </div>
                 </div>
 
                 <!-- Zapier -->
-                <div class="card-hover group">
-                    <div class="bg-gradient-to-br from-red-500 to-pink-600 p-8 rounded-t-xl h-40 flex items-center justify-center relative overflow-hidden">
+                <div class="glass-card rounded-2xl overflow-hidden group">
+                    <div class="bg-gradient-to-br from-red-500 to-pink-600 p-8 h-40 flex items-center justify-center relative overflow-hidden">
                         <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition"></div>
                         <div class="text-center relative z-10">
                             <div class="text-5xl mb-3">⚡</div>
                             <p class="font-bold text-white text-lg">Zapier</p>
                         </div>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-b-xl border border-gray-700 border-t-0">
-                        <h3 class="font-bold mb-3 text-lg">Zapier</h3>
-                        <p class="text-gray-300 text-sm mb-4">Connect 7000+ apps with no coding. Automate repetitive tasks and create powerful workflows instantly.</p>
+                    <div class="p-6">
+                        <h3 class="font-bold mb-3 text-lg text-[#f8fafc]">Zapier</h3>
+                        <p class="text-[#94a3b8] text-sm mb-4">Connect 7000+ apps with no coding. Automate repetitive tasks and create powerful workflows instantly.</p>
                         <a href="https://zapier.com" target="_blank" class="text-purple-400 hover:text-purple-300 text-sm font-semibold transition">Explore Zapier →</a>
                     </div>
                 </div>
 
                 <!-- n8n -->
-                <div class="card-hover group">
-                    <div class="bg-gradient-to-br from-green-500 to-emerald-600 p-8 rounded-t-xl h-40 flex items-center justify-center relative overflow-hidden">
+                <div class="glass-card rounded-2xl overflow-hidden group">
+                    <div class="bg-gradient-to-br from-green-500 to-emerald-600 p-8 h-40 flex items-center justify-center relative overflow-hidden">
                         <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition"></div>
                         <div class="text-center relative z-10">
                             <div class="text-5xl mb-3">🔄</div>
                             <p class="font-bold text-white text-lg">n8n</p>
                         </div>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-b-xl border border-gray-700 border-t-0">
-                        <h3 class="font-bold mb-3 text-lg">n8n</h3>
-                        <p class="text-gray-300 text-sm mb-4">Open-source workflow automation. Self-hosted or cloud - complete control over your automations.</p>
+                    <div class="p-6">
+                        <h3 class="font-bold mb-3 text-lg text-[#f8fafc]">n8n</h3>
+                        <p class="text-[#94a3b8] text-sm mb-4">Open-source workflow automation. Self-hosted or cloud - complete control over your automations.</p>
                         <a href="https://n8n.io" target="_blank" class="text-purple-400 hover:text-purple-300 text-sm font-semibold transition">Explore n8n →</a>
                     </div>
                 </div>
             </div>
 
-            <div class="mt-16 bg-gradient-to-r from-cyan-900/15 to-purple-900/15 border border-cyan-500/30 rounded-2xl p-8 shadow-lg shadow-cyan-500/5">
-                <h3 class="text-2xl font-bold mb-4 text-center text-cyan-400">Automation Solutions I Build</h3>
+            <!-- Solutions Grid -->
+            <div class="mt-16 glass-card neon-border rounded-2xl p-8">
+                <h3 class="text-2xl font-bold mb-6 text-center text-cyan-400">Automation Solutions I Build</h3>
                 <div class="grid md:grid-cols-3 gap-4 text-center">
-                    <div>
+                    <div class="p-4">
                         <p class="text-cyan-400 font-semibold mb-2">🎯 Lead Generation</p>
-                        <p class="text-gray-300 text-sm">Auto-capture, qualify, and nurture leads 24/7</p>
+                        <p class="text-[#94a3b8] text-sm">Auto-capture, qualify, and nurture leads 24/7</p>
                     </div>
-                    <div>
+                    <div class="p-4">
                         <p class="text-cyan-400 font-semibold mb-2">📧 Email Sequences</p>
-                        <p class="text-gray-300 text-sm">Intelligent drip campaigns that convert</p>
+                        <p class="text-[#94a3b8] text-sm">Intelligent drip campaigns that convert</p>
                     </div>
-                    <div>
+                    <div class="p-4">
                         <p class="text-cyan-400 font-semibold mb-2">📱 SMS & Chat Flows</p>
-                        <p class="text-gray-300 text-sm">Multi-channel messaging automation</p>
+                        <p class="text-[#94a3b8] text-sm">Multi-channel messaging automation</p>
                     </div>
-                    <div>
+                    <div class="p-4">
                         <p class="text-cyan-400 font-semibold mb-2">💰 Payment Integration</p>
-                        <p class="text-gray-300 text-sm">Seamless payment processing workflows</p>
+                        <p class="text-[#94a3b8] text-sm">Seamless payment processing workflows</p>
                     </div>
-                    <div>
+                    <div class="p-4">
                         <p class="text-cyan-400 font-semibold mb-2">📊 Data Sync</p>
-                        <p class="text-gray-300 text-sm">Real-time data syncing across platforms</p>
+                        <p class="text-[#94a3b8] text-sm">Real-time data syncing across platforms</p>
                     </div>
-                    <div>
+                    <div class="p-4">
                         <p class="text-cyan-400 font-semibold mb-2">🤖 AI Integration</p>
-                        <p class="text-gray-300 text-sm">ChatGPT, Zapier AI, and custom AI flows</p>
+                        <p class="text-[#94a3b8] text-sm">ChatGPT, Zapier AI, and custom AI flows</p>
                     </div>
                 </div>
             </div>
@@ -456,191 +215,174 @@
     </section>
 
     <!-- GoHighLevel Section -->
-    <section id="gohighlevel" class="py-20 px-4 bg-gradient-to-b from-[#0f0a2e] to-[#1a0e3f]/50">
+    <section id="gohighlevel" class="section-alt py-20 px-4 reveal">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">GoHighLevel Funnels & Projects</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">GoHighLevel Funnels & Projects</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                 <!-- Funnel 1 -->
-                <div class="card-hover cyber-card rounded-2xl overflow-hidden">
+                <div class="glass-card rounded-2xl overflow-hidden">
                     <div class="bg-gradient-to-br from-purple-600 to-purple-800 p-6 h-32 flex items-center justify-center">
                         <div class="text-center">
-                            <div class="icon-container w-12 h-12 text-2xl">💼</div>
-                            <p class="font-semibold mt-2">Your Power Suite</p>
+                            <div class="icon-container w-12 h-12 text-2xl mx-auto">💼</div>
+                            <p class="font-semibold mt-2 text-sm">Your Power Suite</p>
                         </div>
                     </div>
-                    <div class="p-6">
+                    <div class="p-5">
                         <h3 class="font-bold mb-2 text-cyan-400">Your Power Suite</h3>
-                        <p class="text-sm text-gray-300 mb-4">Professional business solutions and automation</p>
+                        <p class="text-sm text-[#94a3b8] mb-4">Professional business solutions and automation</p>
                         <a href="https://yourpowersuite.com" target="_blank" class="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">View Project →</a>
                     </div>
                 </div>
 
                 <!-- Funnel 2 -->
-                <div class="card-hover cyber-card rounded-2xl overflow-hidden">
+                <div class="glass-card rounded-2xl overflow-hidden">
                     <div class="bg-gradient-to-br from-blue-600 to-blue-800 p-6 h-32 flex items-center justify-center">
                         <div class="text-center">
-                            <div class="icon-container w-12 h-12 text-2xl">🛡️</div>
-                            <p class="font-semibold mt-2">Secure The Brand</p>
+                            <div class="icon-container w-12 h-12 text-2xl mx-auto">🛡️</div>
+                            <p class="font-semibold mt-2 text-sm">Secure The Brand</p>
                         </div>
                     </div>
-                    <div class="p-6">
+                    <div class="p-5">
                         <h3 class="font-bold mb-2 text-cyan-400">Secure The Brand</h3>
-                        <p class="text-sm text-gray-300 mb-4">Brand protection and security solutions</p>
+                        <p class="text-sm text-[#94a3b8] mb-4">Brand protection and security solutions</p>
                         <a href="https://securethebrand.com" target="_blank" class="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">View Project →</a>
                     </div>
                 </div>
 
                 <!-- Funnel 3 -->
-                <div class="card-hover cyber-card rounded-2xl overflow-hidden">
+                <div class="glass-card rounded-2xl overflow-hidden">
                     <div class="bg-gradient-to-br from-green-600 to-green-800 p-6 h-32 flex items-center justify-center">
                         <div class="text-center">
-                            <div class="icon-container w-12 h-12 text-2xl">🔗</div>
-                            <p class="font-semibold mt-2">Digilign</p>
+                            <div class="icon-container w-12 h-12 text-2xl mx-auto">🔗</div>
+                            <p class="font-semibold mt-2 text-sm">Digilign</p>
                         </div>
                     </div>
-                    <div class="p-6">
+                    <div class="p-5">
                         <h3 class="font-bold mb-2 text-cyan-400">Digilign</h3>
-                        <p class="text-sm text-gray-300 mb-4">Digital alignment and business integration</p>
+                        <p class="text-sm text-[#94a3b8] mb-4">Digital alignment and business integration</p>
                         <a href="https://digilign.com" target="_blank" class="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">View Project →</a>
                     </div>
                 </div>
 
                 <!-- Funnel 4 -->
-                <div class="card-hover cyber-card rounded-2xl overflow-hidden">
+                <div class="glass-card rounded-2xl overflow-hidden">
                     <div class="bg-gradient-to-br from-orange-600 to-orange-800 p-6 h-32 flex items-center justify-center">
                         <div class="text-center">
-                            <div class="icon-container w-12 h-12 text-2xl">🍷</div>
-                            <p class="font-semibold mt-2">New Wine Digital</p>
+                            <div class="icon-container w-12 h-12 text-2xl mx-auto">🍷</div>
+                            <p class="font-semibold mt-2 text-sm">New Wine Digital</p>
                         </div>
                     </div>
-                    <div class="p-6">
+                    <div class="p-5">
                         <h3 class="font-bold mb-2 text-cyan-400">New Wine Digital</h3>
-                        <p class="text-sm text-gray-300 mb-4">Digital transformation services</p>
+                        <p class="text-sm text-[#94a3b8] mb-4">Digital transformation services</p>
                         <a href="https://newwine.digital" target="_blank" class="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">View Project →</a>
                     </div>
                 </div>
 
                 <!-- Funnel 5 -->
-                <div class="card-hover cyber-card rounded-2xl overflow-hidden">
+                <div class="glass-card rounded-2xl overflow-hidden">
                     <div class="bg-gradient-to-br from-pink-600 to-pink-800 p-6 h-32 flex items-center justify-center">
                         <div class="text-center">
-                            <div class="icon-container w-12 h-12 text-2xl">🎨</div>
-                            <p class="font-semibold mt-2">Papro Painting</p>
+                            <div class="icon-container w-12 h-12 text-2xl mx-auto">🎨</div>
+                            <p class="font-semibold mt-2 text-sm">Papro Painting</p>
                         </div>
                     </div>
-                    <div class="p-6">
+                    <div class="p-5">
                         <h3 class="font-bold mb-2 text-cyan-400">Papro Painting</h3>
-                        <p class="text-sm text-gray-300 mb-4">Creative painting solutions</p>
+                        <p class="text-sm text-[#94a3b8] mb-4">Creative painting solutions</p>
                         <a href="https://go.papropainting.com" target="_blank" class="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">View Project →</a>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Video Editing Section -->
-    <section id="videos" class="py-20 px-4 bg-gradient-to-b from-[#0f0a2e]/50 to-[#1a0e3f]/50 border-t border-cyan-500/20">
+    <section id="videos" class="section-dark py-20 px-4 border-t border-cyan-500/10 reveal">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-6 gradient-text">Video Editing Portfolio</h2>
-            <p class="text-center text-gray-300 mb-16 text-lg">Professional video content created with Capcut for social media, marketing & promotions</p>
-            
-            <div class="grid md:grid-cols-3 gap-6 mb-8">
-                    <!-- Video 1 -->
-                    <div class="card-hover cyber-card rounded-2xl overflow-hidden">
-                        <div class="aspect-video">
-                            <iframe src="https://drive.google.com/file/d/11UTzVCBWsIojOVrU9J8dxcRopXUI7JEy/preview" title="Video Project 1" class="w-full h-full" allow="autoplay" allowfullscreen></iframe>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-bold text-cyan-400">Video Project 1</h3>
-                        </div>
-                    </div>
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-6 gradient-text">Video Editing Portfolio</h2>
+            <p class="text-center text-[#94a3b8] mb-16 text-lg">Professional video content created with Capcut for social media, marketing & promotions</p>
 
-                    <!-- Video 2 -->
-                    <div class="card-hover cyber-card rounded-2xl overflow-hidden">
-                        <div class="aspect-video">
-                            <iframe src="https://drive.google.com/file/d/1eoWG7_28qI2YegIVuRDFiegYuBoFxcIC/preview" title="Video Project 2" class="w-full h-full" allow="autoplay" allowfullscreen></iframe>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-bold text-cyan-400">Video Project 2</h3>
-                        </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8 max-w-5xl mx-auto">
+                <div class="phone-frame">
+                    <div class="phone-screen">
+                        <iframe src="https://drive.google.com/file/d/11UTzVCBWsIojOVrU9J8dxcRopXUI7JEy/preview" title="Video Project 1" allow="autoplay" allowfullscreen loading="lazy"></iframe>
                     </div>
-
-                    <!-- Video 3 -->
-                    <div class="card-hover cyber-card rounded-2xl overflow-hidden">
-                        <div class="aspect-video">
-                            <iframe src="https://drive.google.com/file/d/1s9SMtqX_R8usf7nKveuxWILUg6sH58du/preview" title="Video Project 3" class="w-full h-full" allow="autoplay" allowfullscreen></iframe>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-bold text-cyan-400">Video Project 3</h3>
-                        </div>
-                    </div>
+                    <p class="text-center text-cyan-400 font-semibold text-sm mt-3">Video Project 1</p>
                 </div>
 
+                <div class="phone-frame">
+                    <div class="phone-screen">
+                        <iframe src="https://drive.google.com/file/d/1eoWG7_28qI2YegIVuRDFiegYuBoFxcIC/preview" title="Video Project 2" allow="autoplay" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <p class="text-center text-cyan-400 font-semibold text-sm mt-3">Video Project 2</p>
+                </div>
+
+                <div class="phone-frame">
+                    <div class="phone-screen">
+                        <iframe src="https://drive.google.com/file/d/1s9SMtqX_R8usf7nKveuxWILUg6sH58du/preview" title="Video Project 3" allow="autoplay" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <p class="text-center text-cyan-400 font-semibold text-sm mt-3">Video Project 3</p>
+                </div>
+            </div>
+
             <div class="text-center">
-                <p class="text-gray-300 mb-6">All videos edited with <span class="font-bold text-cyan-400">Capcut</span> for faster, professional results</p>
-                <a href="#contact" class="inline-block btn-neon px-8 py-3 rounded-lg font-semibold transition">Request Video Samples</a>
+                <p class="text-[#94a3b8] mb-6">All videos edited with <span class="font-bold text-cyan-400">Capcut</span> for faster, professional results</p>
+                <a href="#contact" class="inline-block btn-neon px-8 py-3 rounded-lg font-semibold">Request Video Samples</a>
             </div>
         </div>
     </section>
 
     <!-- Graphic Design Section -->
-    <section id="graphics" class="py-20 px-4 bg-gradient-to-b from-[#0f0a2e] to-[#1a0e3f]/50">
+    <section id="graphics" class="section-alt py-20 px-4 reveal">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-6 gradient-text">Graphic Design Portfolio</h2>
-            <p class="text-center text-gray-300 mb-16 text-lg">Creative and engaging designs for ads, branding & social media content</p>
-            
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-6 gradient-text">Graphic Design Portfolio</h2>
+            <p class="text-center text-[#94a3b8] mb-16 text-lg">Creative and engaging designs for ads, branding & social media content</p>
+
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
-                <!-- Design 1 -->
-                <div class="card-hover cyber-card rounded-2xl overflow-hidden">
+                <div class="glass-card rounded-2xl overflow-hidden">
                     <img src="https://drive.google.com/thumbnail?id=1U2BY0Qe_zz-F95tJBqC0FJ3p-Ja3s62d&sz=w800" alt="Design 1" loading="lazy" class="w-full h-64 object-cover">
                     <div class="p-3">
                         <h3 class="font-semibold text-cyan-400 text-sm">Design 1</h3>
                     </div>
                 </div>
 
-                <!-- Design 2 -->
-                <div class="card-hover cyber-card rounded-2xl overflow-hidden">
+                <div class="glass-card rounded-2xl overflow-hidden">
                     <img src="https://drive.google.com/thumbnail?id=1H6Kd_DKj9AfXaJG1qjtkTa0tm2eVOoA6&sz=w800" alt="Design 2" loading="lazy" class="w-full h-64 object-cover">
                     <div class="p-3">
                         <h3 class="font-semibold text-cyan-400 text-sm">Design 2</h3>
                     </div>
                 </div>
 
-                <!-- Design 3 -->
-                <div class="card-hover cyber-card rounded-2xl overflow-hidden">
+                <div class="glass-card rounded-2xl overflow-hidden">
                     <img src="https://drive.google.com/thumbnail?id=1ZAJoEi9-Ziv2e74mGLYPdgv98w5vv3ND&sz=w800" alt="Design 3" loading="lazy" class="w-full h-64 object-cover">
                     <div class="p-3">
                         <h3 class="font-semibold text-cyan-400 text-sm">Design 3</h3>
                     </div>
                 </div>
 
-                <!-- Design 4 -->
-                <div class="card-hover cyber-card rounded-2xl overflow-hidden">
+                <div class="glass-card rounded-2xl overflow-hidden">
                     <img src="https://drive.google.com/thumbnail?id=11EwXCcuL5tp1GA0kLxFuqkqbkkhC7Ark&sz=w800" alt="Design 4" loading="lazy" class="w-full h-64 object-cover">
                     <div class="p-3">
                         <h3 class="font-semibold text-cyan-400 text-sm">Design 4</h3>
                     </div>
                 </div>
 
-                <!-- Design 5 -->
-                <div class="card-hover cyber-card rounded-2xl overflow-hidden">
+                <div class="glass-card rounded-2xl overflow-hidden">
                     <img src="https://drive.google.com/thumbnail?id=1-0WjxhuwcN11RbJICxtogj0eFJCPCrfE&sz=w800" alt="Design 5" loading="lazy" class="w-full h-64 object-cover">
                     <div class="p-3">
                         <h3 class="font-semibold text-cyan-400 text-sm">Design 5</h3>
                     </div>
                 </div>
 
-                <!-- Design 6 -->
-                <div class="card-hover cyber-card rounded-2xl overflow-hidden">
+                <div class="glass-card rounded-2xl overflow-hidden">
                     <img src="https://drive.google.com/thumbnail?id=1TU-zIaO99Rqj0h9AlK9MJhw7oeeGWW2f&sz=w800" alt="Design 6" loading="lazy" class="w-full h-64 object-cover">
                     <div class="p-3">
                         <h3 class="font-semibold text-cyan-400 text-sm">Design 6</h3>
                     </div>
                 </div>
 
-                <!-- Design 7 -->
-                <div class="card-hover cyber-card rounded-2xl overflow-hidden">
+                <div class="glass-card rounded-2xl overflow-hidden">
                     <img src="https://drive.google.com/thumbnail?id=1zwwCxBdu86_XjVjhGTpko0jvf6MiOfFL&sz=w800" alt="Design 7" loading="lazy" class="w-full h-64 object-cover">
                     <div class="p-3">
                         <h3 class="font-semibold text-cyan-400 text-sm">Design 7</h3>
@@ -649,99 +391,80 @@
             </div>
 
             <div class="text-center">
-                <p class="text-gray-300 mb-6">All designs created with <span class="font-bold text-cyan-400">Canva</span> for faster, creative results</p>
-                <a href="#contact" class="inline-block btn-neon px-8 py-3 rounded-lg font-semibold transition">Request Design Samples</a>
+                <p class="text-[#94a3b8] mb-6">All designs created with <span class="font-bold text-cyan-400">Canva</span> for faster, creative results</p>
+                <a href="#contact" class="inline-block btn-neon px-8 py-3 rounded-lg font-semibold">Request Design Samples</a>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-4 bg-gradient-to-b from-[#0f0a2e] to-[#1a0e3f] border-t border-cyan-500/20">
+    <section id="contact" class="section-dark py-20 px-4 border-t border-cyan-500/10 reveal">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-6 gradient-text">Let's Connect & Collaborate</h2>
-            <p class="text-center text-gray-300 mb-16 text-lg">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-6 gradient-text">Let's Connect & Collaborate</h2>
+            <p class="text-center text-[#94a3b8] mb-16 text-lg">
                 Have a project in mind? Let's chat! Reach out via email, message me on social, or check out my resume.
             </p>
 
-            <!-- Resume & Contact Grid -->
+            <!-- Contact Cards -->
             <div class="grid md:grid-cols-3 gap-6 mb-12">
-                <!-- Email Card -->
-                <div class="card-hover cyber-card p-8 rounded-2xl text-center group">
+                <div class="glass-card p-8 rounded-2xl text-center group">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition">📧</div>
                     <h3 class="text-xl font-bold mb-3 text-cyan-400">Email Me</h3>
-                    <p class="text-gray-300 text-sm mb-4">Direct message for inquiries and project discussions</p>
-                    <a href="mailto:johnjosephperez26@gmail.com" class="inline-block btn-neon px-6 py-2 rounded-lg font-semibold transition">
-                        Send Email
-                    </a>
+                    <p class="text-[#94a3b8] text-sm mb-4">Direct message for inquiries and project discussions</p>
+                    <a href="mailto:johnjosephperez26@gmail.com" class="inline-block btn-neon px-6 py-2 rounded-lg font-semibold">Send Email</a>
                 </div>
 
-                <!-- Resume Card -->
-                <div class="card-hover cyber-card p-8 rounded-2xl text-center group">
+                <div class="glass-card p-8 rounded-2xl text-center group">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition">📄</div>
                     <h3 class="text-xl font-bold mb-3 text-cyan-400">My Resume</h3>
-                    <p class="text-gray-300 text-sm mb-4">View my experience, skills, and achievements</p>
-                    <a href="https://drive.google.com/drive/folders/1ZiyC_di4H4wHhRVy6pCuEdS1JDJINAFd?usp=drive_link" target="_blank" class="inline-block btn-neon px-6 py-2 rounded-lg font-semibold transition">
-                        Open Resume
-                    </a>
+                    <p class="text-[#94a3b8] text-sm mb-4">View my experience, skills, and achievements</p>
+                    <a href="https://drive.google.com/drive/folders/1ZiyC_di4H4wHhRVy6pCuEdS1JDJINAFd?usp=drive_link" target="_blank" class="inline-block btn-neon px-6 py-2 rounded-lg font-semibold">Open Resume</a>
                 </div>
 
-                <!-- Quick Chat Card -->
-                <div class="card-hover cyber-card p-8 rounded-2xl text-center group">
+                <div class="glass-card p-8 rounded-2xl text-center group">
                     <div class="text-5xl mb-4 group-hover:scale-110 transition">💬</div>
                     <h3 class="text-xl font-bold mb-3 text-cyan-400">Quick Chat</h3>
-                    <p class="text-gray-300 text-sm mb-4">Connect on your favorite social platform</p>
-                    <a href="#social-platforms" class="inline-block btn-neon px-6 py-2 rounded-lg font-semibold transition">
-                        Message Me
-                    </a>
+                    <p class="text-[#94a3b8] text-sm mb-4">Connect on your favorite social platform</p>
+                    <a href="#social-platforms" class="inline-block btn-neon px-6 py-2 rounded-lg font-semibold">Message Me</a>
                 </div>
             </div>
 
             <!-- Contact Form -->
-            <div class="cyber-card rounded-2xl p-8 mb-12">
+            <div class="glass-card rounded-2xl p-8 mb-12">
                 <h3 class="text-2xl font-bold mb-6 text-center text-cyan-400">Send Me a Message</h3>
                 <form id="contact-form" class="space-y-4">
                     <div>
-                        <label for="contact-name" class="block text-gray-300 mb-2 text-sm font-semibold">Name</label>
-                        <input type="text" id="contact-name" name="name" required placeholder="Your name"
-                            class="w-full px-4 py-3 rounded-lg bg-[#0a0e27] border border-cyan-500/30 text-white placeholder-gray-500 focus:border-cyan-400 focus:outline-none transition"
-                            aria-label="Your name">
+                        <label for="contact-name" class="block text-[#94a3b8] mb-2 text-sm font-semibold">Name</label>
+                        <input type="text" id="contact-name" name="name" required placeholder="Your name" class="form-input" aria-label="Your name">
                     </div>
                     <div>
-                        <label for="contact-email" class="block text-gray-300 mb-2 text-sm font-semibold">Email</label>
-                        <input type="email" id="contact-email" name="email" required placeholder="your@email.com"
-                            class="w-full px-4 py-3 rounded-lg bg-[#0a0e27] border border-cyan-500/30 text-white placeholder-gray-500 focus:border-cyan-400 focus:outline-none transition"
-                            aria-label="Your email address">
+                        <label for="contact-email" class="block text-[#94a3b8] mb-2 text-sm font-semibold">Email</label>
+                        <input type="email" id="contact-email" name="email" required placeholder="your@email.com" class="form-input" aria-label="Your email address">
                     </div>
                     <div>
-                        <label for="contact-message" class="block text-gray-300 mb-2 text-sm font-semibold">Message</label>
-                        <textarea id="contact-message" name="message" required rows="4" placeholder="Tell me about your project..."
-                            class="w-full px-4 py-3 rounded-lg bg-[#0a0e27] border border-cyan-500/30 text-white placeholder-gray-500 focus:border-cyan-400 focus:outline-none transition resize-none"
-                            aria-label="Your message"></textarea>
+                        <label for="contact-message" class="block text-[#94a3b8] mb-2 text-sm font-semibold">Message</label>
+                        <textarea id="contact-message" name="message" required rows="4" placeholder="Tell me about your project..." class="form-input resize-none" aria-label="Your message"></textarea>
                     </div>
                     <div class="text-center pt-2">
-                        <button type="submit" class="btn-neon px-8 py-3 rounded-lg font-semibold transition">
-                            Send Message
-                        </button>
+                        <button type="submit" class="btn-neon px-8 py-3 rounded-lg font-semibold">Send Message</button>
                     </div>
                 </form>
             </div>
 
-            <!-- Social Media Section -->
+            <!-- Social Media -->
             <div id="social-platforms" class="mb-12">
                 <h3 class="text-2xl font-bold text-center mb-8 gradient-text">Connect on my Social</h3>
                 <div class="flex justify-center gap-6 flex-wrap mb-8">
-                    <!-- Facebook -->
-                    <a href="https://www.facebook.com/jaaaaan09" target="_blank" class="card-hover group" aria-label="Visit Facebook profile">
-                        <div class="cyber-card p-6 rounded-xl text-center group-hover:border-blue-400 transition">
+                    <a href="https://www.facebook.com/jaaaaan09" target="_blank" class="group" aria-label="Visit Facebook profile">
+                        <div class="glass-card p-6 rounded-xl text-center group-hover:border-blue-400 transition">
                             <svg class="w-12 h-12 mb-2 mx-auto text-blue-500 drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                             <p class="font-semibold text-blue-400">Facebook</p>
-                            <p class="text-gray-400 text-xs mt-1">Message me</p>
+                            <p class="text-[#64748b] text-xs mt-1">Message me</p>
                         </div>
                     </a>
 
-                    <!-- Instagram -->
-                    <a href="https://www.instagram.com/itsjannp/" target="_blank" class="card-hover group" aria-label="Visit Instagram profile">
-                        <div class="cyber-card p-6 rounded-xl text-center group-hover:border-pink-400 transition">
+                    <a href="https://www.instagram.com/itsjannp/" target="_blank" class="group" aria-label="Visit Instagram profile">
+                        <div class="glass-card p-6 rounded-xl text-center group-hover:border-pink-400 transition">
                             <svg class="w-12 h-12 mb-2 mx-auto drop-shadow-lg" viewBox="0 0 24 24" fill="url(#instagram-gradient)">
                                 <defs>
                                     <linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
@@ -754,33 +477,28 @@
                                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
                             </svg>
                             <p class="font-semibold text-transparent bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-500 bg-clip-text">Instagram</p>
-                            <p class="text-gray-400 text-xs mt-1">@itsjannp</p>
+                            <p class="text-[#64748b] text-xs mt-1">@itsjannp</p>
                         </div>
                     </a>
 
-                    <!-- LinkedIn -->
-                    <a href="https://www.linkedin.com/in/john-joseph-perez/" target="_blank" class="card-hover group" aria-label="Visit LinkedIn profile">
-                        <div class="cyber-card p-6 rounded-xl text-center group-hover:border-blue-500 transition">
+                    <a href="https://www.linkedin.com/in/john-joseph-perez/" target="_blank" class="group" aria-label="Visit LinkedIn profile">
+                        <div class="glass-card p-6 rounded-xl text-center group-hover:border-blue-500 transition">
                             <img src="linkedin.png" alt="LinkedIn" class="w-12 h-12 mb-2 mx-auto drop-shadow-lg">
                             <p class="font-semibold text-blue-400">LinkedIn</p>
-                            <p class="text-gray-400 text-xs mt-1">Connect</p>
+                            <p class="text-[#64748b] text-xs mt-1">Connect</p>
                         </div>
                     </a>
                 </div>
             </div>
 
             <!-- Premium CTA -->
-            <div class="bg-gradient-to-r from-cyan-600/15 via-purple-600/15 to-cyan-600/15 border border-cyan-500/30 p-1 rounded-2xl neon-border shadow-xl shadow-cyan-500/5">
-                <div class="bg-gradient-to-b from-[#1a0e3f]/90 to-[#0a0e27]/90 backdrop-blur-sm p-8 rounded-xl text-center">
+            <div class="neon-border p-1 rounded-2xl shadow-xl">
+                <div class="glass-card p-8 rounded-xl text-center">
                     <h3 class="text-3xl font-bold mb-3 gradient-text neon-glow">Let's Build Something Incredible</h3>
-                    <p class="text-gray-300 mb-6 text-lg">Whether you need AI automations, stunning design, video editing, or full digital solutions—I'm ready to transform your vision into reality.</p>
+                    <p class="text-[#94a3b8] mb-6 text-lg">Whether you need AI automations, stunning design, video editing, or full digital solutions—I'm ready to transform your vision into reality.</p>
                     <div class="flex gap-4 justify-center flex-wrap">
-                        <a href="mailto:johnjosephperez26@gmail.com" class="btn-neon px-8 py-3 rounded-lg font-semibold transition hover:scale-105">
-                            Start Your Project
-                        </a>
-                        <a href="#automations" class="btn-neon-outline px-8 py-3 rounded-lg font-semibold transition">
-                            View Services
-                        </a>
+                        <a href="mailto:johnjosephperez26@gmail.com" class="btn-neon px-8 py-3 rounded-lg font-semibold">Start Your Project</a>
+                        <a href="#automations" class="btn-neon-outline px-8 py-3 rounded-lg font-semibold">View Services</a>
                     </div>
                 </div>
             </div>
@@ -794,110 +512,14 @@
     </button>
 
     <!-- Footer -->
-    <footer class="border-t border-cyan-500/30 bg-gradient-to-b from-[#0a0e27] to-[#050616] py-8 px-4">
-        <div class="max-w-6xl mx-auto text-center text-gray-400">
+    <footer class="border-t border-cyan-500/15 bg-[#040712] py-8 px-4">
+        <div class="max-w-6xl mx-auto text-center text-[#64748b]">
             <p class="mb-2">© 2026 John Joseph Perez. All rights reserved.</p>
             <p class="text-sm">Domain: <span class="text-cyan-400 neon-glow">johnjoseph.portfolio</span></p>
         </div>
     </footer>
 
-    <!-- JavaScript for animations -->
-    <script>
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]:not(.mobile-menu a)').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Mobile menu toggle
-        const hamburgerBtn = document.getElementById('hamburger-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileOverlay = document.getElementById('mobile-overlay');
-
-        function toggleMobileMenu() {
-            const isOpen = mobileMenu.classList.contains('active');
-            mobileMenu.classList.toggle('active');
-            mobileOverlay.classList.toggle('active');
-            hamburgerBtn.setAttribute('aria-expanded', !isOpen);
-        }
-
-        function closeMobileMenu() {
-            mobileMenu.classList.remove('active');
-            mobileOverlay.classList.remove('active');
-            hamburgerBtn.setAttribute('aria-expanded', 'false');
-        }
-
-        hamburgerBtn.addEventListener('click', toggleMobileMenu);
-        mobileOverlay.addEventListener('click', closeMobileMenu);
-
-        // Close mobile menu when a nav link is clicked, then smooth scroll
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                closeMobileMenu();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
-        // Fade in elements on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        // Apply fade-in to cards
-        document.querySelectorAll('.card-hover').forEach(el => {
-            el.style.opacity = '0';
-            observer.observe(el);
-        });
-
-        // Header is now sticky and always visible
-
-        // Contact form mailto handler
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('contact-name').value;
-            const email = document.getElementById('contact-email').value;
-            const message = document.getElementById('contact-message').value;
-            const subject = encodeURIComponent('Portfolio Inquiry from ' + name);
-            const body = encodeURIComponent(message + '\n\nFrom: ' + name + '\nEmail: ' + email);
-            window.location.href = 'mailto:johnjosephperez26@gmail.com?subject=' + subject + '&body=' + body;
-        });
-
-        // Back to top button
-        const backToTopBtn = document.getElementById('back-to-top');
-
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add('visible');
-            } else {
-                backToTopBtn.classList.remove('visible');
-            }
-        });
-
-        backToTopBtn.addEventListener('click', function() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
